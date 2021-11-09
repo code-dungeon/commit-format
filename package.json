@@ -1,31 +1,30 @@
 {
   "name": "@code-dungeon/commit-format",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "Shared library for commit formating",
   "scripts": {
-    "commit": "git-cz"
+    "prepare": "husky install .github/hooks"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:code-dungeon/commit-format.git"
   },
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "args": "^5.0.1",
     "commitizen": "^4.2.4",
-    "cz-customizable": "^6.3.0"
+    "cz-customizable": "^6.3.0",
+    "husky": "^7.0.0"
   },
   "bin": {
-    "cf": "./cf.js",
-    "cf-commit": "./cf-commit.js"
+    "cf": "./bin/cli.js"
   },
+  "files":[
+    "bin/"
+  ],
   "config": {
-    "commitizen": {
-      "path": "cz-customizable"
-    },
     "cz-customizable": {
-      "config": "config/customConfig.js"
+      "config": "commit-config.js"
     }
   }
 }

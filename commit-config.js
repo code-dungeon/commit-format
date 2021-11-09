@@ -17,24 +17,24 @@ module.exports = {
 
   scopes: [
     {name: 'config'},
-    {name: 'app'}
+    {name: 'module'}
   ],
 
   // it needs to match the value for field type. Eg.: 'fix'
 
   scopeOverrides: {
-    feature: ['app'],
+    feature: ['module'],
     test: [
-      {name: 'e2eTest'},
-      {name: 'unitTest'},
-      {name: 'perfTest'}
+      {name: 'e2e-test'},
+      {name: 'unit-test'},
+      {name: 'perf-test'}
     ],
     fix: [
       {name: 'config'},
-      {name: 'app'},
-      {name: 'e2eTest'},
-      {name: 'unitTest'},
-      {name: 'perfTest'}
+      {name: 'module'},
+      {name: 'e2e-test'},
+      {name: 'unit-test'},
+      {name: 'perf-test'}
     ],
     chore: [
       'pipeline',
